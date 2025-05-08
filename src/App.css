@@ -15,6 +15,15 @@ body {
   overflow-x: hidden;
 }
 
+/* RTL Support */
+html[dir="rtl"] #root {
+  text-align: right;
+}
+
+html[dir="rtl"] .rtl-flip {
+  transform: scaleX(-1);
+}
+
 @keyframes float {
   0%, 100% {
     transform: translateY(0);
@@ -26,4 +35,26 @@ body {
 
 .animate-float {
   animation: float 6s ease-in-out infinite;
+}
+
+/* RTL support for margins and paddings in flexbox */
+html[dir="rtl"] .md\:ml-4 {
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+html[dir="rtl"] .ml-2,
+html[dir="rtl"] .mr-2 {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+html[dir="rtl"] .mr-4 {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+
+/* Font support for Arabic */
+html[lang="ar"] {
+  font-family: 'Noto Sans Arabic', sans-serif;
 }

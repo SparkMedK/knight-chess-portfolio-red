@@ -8,22 +8,25 @@ import Tournaments from '@/components/Tournaments';
 import Gallery from '@/components/Gallery';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import { LanguageProvider } from '@/contexts/LanguageContext';
 
 const Index = () => {
   return (
-    <div className="flex flex-col min-h-screen">
-      <Navigation />
-      <main>
-        <Hero />
-        <About />
-        <Achievements />
-        <Training />
-        <Tournaments />
-        <Gallery />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <LanguageProvider>
+      <div className="flex flex-col min-h-screen">
+        <Navigation />
+        <main>
+          <Hero />
+          <About />
+          <Achievements />
+          <Training />
+          <Tournaments />
+          <Gallery />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    </LanguageProvider>
   );
 };
 
