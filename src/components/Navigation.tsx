@@ -5,15 +5,19 @@ import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageSelector from './LanguageSelector';
+import { SidebarTrigger } from '@/components/ui/sidebar';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
+          <div className="md:hidden">
+            <SidebarTrigger />
+          </div>
           <KnightLogo className="animate-float" />
           <span className="font-bold text-xl md:text-2xl tracking-tight">
             Samion Magnus

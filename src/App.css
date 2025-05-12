@@ -58,3 +58,36 @@ html[dir="rtl"] .mr-4 {
 html[lang="ar"] {
   font-family: 'Noto Sans Arabic', sans-serif;
 }
+
+/* Sidebar customization */
+[data-sidebar="sidebar"] {
+  background-color: white;
+  color: #333;
+}
+
+[data-sidebar="menu-button"] svg {
+  color: #B91C1C;
+}
+
+[data-sidebar="menu-button"]:hover svg {
+  color: white;
+}
+
+[data-sidebar="menu-button"]:hover {
+  background-color: #B91C1C;
+  color: white;
+}
+
+html[dir="rtl"] [data-sidebar="menu-button"] > a {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] [data-sidebar="menu-button"] > a > span {
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+html[dir="rtl"] [data-sidebar="menu-button"] > a > svg {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}

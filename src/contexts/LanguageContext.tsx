@@ -1,5 +1,5 @@
 
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 import { translations } from '../translations';
 
 export type Language = 'en' | 'fr' | 'ar';
@@ -20,12 +20,18 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     let translation: any = translations[language];
     
     for (const k of keys) {
-      if (!translation[k]) return key;
+      if (!translation || !translation[k]) return key;
       translation = translation[k];
     }
     
     return translation;
   };
+
+  useEffect(() => {
+    // Update HTML document language and direction when language changes
+    document.documentElement.lang = language;
+    document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
+  }, [language]);
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t }}>

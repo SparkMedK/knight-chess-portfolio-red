@@ -1,4 +1,3 @@
-
 export const translations = {
   en: {
     nav: {
@@ -7,7 +6,9 @@ export const translations = {
       training: 'Training',
       tournaments: 'Tournaments',
       gallery: 'Gallery',
-      contact: 'Contact'
+      contact: 'Contact',
+      home: 'Home',
+      navigation: 'Navigation'
     },
     hero: {
       title: 'Grand Master',
@@ -82,11 +83,13 @@ export const translations = {
   fr: {
     nav: {
       about: 'À propos',
-      achievements: 'Succès',
+      achievements: 'Réalisations',
       training: 'Formation',
       tournaments: 'Tournois',
       gallery: 'Galerie',
-      contact: 'Contact'
+      contact: 'Contact',
+      home: 'Accueil',
+      navigation: 'Navigation'
     },
     hero: {
       title: 'Grand Maître',
@@ -111,7 +114,7 @@ export const translations = {
       }
     },
     achievements: {
-      title: 'Succès',
+      title: 'Réalisations',
       majorResults: 'Résultats Majeurs en Tournoi',
       titlesRecognition: 'Titres & Reconnaissance',
       grandMaster: {
@@ -160,12 +163,14 @@ export const translations = {
   },
   ar: {
     nav: {
-      about: 'نبذة عن',
-      achievements: 'إنجازات',
+      about: 'نبذة عني',
+      achievements: 'الإنجازات',
       training: 'التدريب',
       tournaments: 'البطولات',
       gallery: 'معرض الصور',
-      contact: 'اتصال'
+      contact: 'اتصل بنا',
+      home: 'الرئيسية',
+      navigation: 'التنقل'
     },
     hero: {
       title: 'أستاذ كبير',
