@@ -3,11 +3,8 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import KnightLogo from './KnightLogo';
 import { ArrowRight } from 'lucide-react';
-import { useLanguage } from '@/contexts/LanguageContext';
 
 const Hero = () => {
-  const { t } = useLanguage();
-  
   return (
     <div className="relative overflow-hidden bg-chess-dark text-white">
       {/* Background pattern */}
@@ -34,21 +31,22 @@ const Hero = () => {
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            {t('hero.title')} <br />
+            Grand Master <br />
             <span className="text-chess-knight-red">Samion Magnus</span>
           </h1>
           
           <p className="text-lg md:text-xl text-gray-300 mb-8">
-            {t('hero.subtitle')}
+            FIDE Trainer & International Chess Master with over 20 years of experience
+            transforming beginners into champions.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
             <Button className="bg-chess-knight-red hover:bg-chess-knight-red/90 text-white">
-              {t('hero.bookTraining')}
+              Book a Training
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
             <Button variant="outline" className="border-white text-white hover:bg-white/10">
-              {t('hero.viewTournaments')}
+              View Tournaments
             </Button>
           </div>
         </div>
