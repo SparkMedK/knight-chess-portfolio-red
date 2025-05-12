@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import {
   Trophy,
@@ -18,8 +18,6 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarProvider,
-  SidebarTrigger,
   SidebarHeader,
   SidebarGroup,
   SidebarGroupContent,
@@ -38,7 +36,7 @@ const navigationItems = [
   { id: 'contact', icon: Mail, href: '#contact' }
 ];
 
-const SidebarContent = () => {
+const AppSidebarContent = () => {
   const { t } = useLanguage();
   const { toggleSidebar } = useSidebar();
   
@@ -95,7 +93,7 @@ const SidebarContent = () => {
 };
 
 export const AppSidebar = () => {
-  return <SidebarContent />;
+  return <AppSidebarContent />;
 };
 
 export default AppSidebar;
