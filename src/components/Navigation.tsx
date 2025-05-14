@@ -11,7 +11,10 @@ const Navigation = () => {
     <header className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
-          <KnightLogo className="animate-float" />
+          <div className="flex items-center">
+            <KnightLogo className="animate-float" />
+            <KnightLogo className="ml-2" size={30} />
+          </div>
           <span className="font-bold text-xl md:text-2xl tracking-tight">
             Samion Magnus
           </span>
