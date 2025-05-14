@@ -2,7 +2,7 @@
 import React from 'react';
 import KnightLogo from './KnightLogo';
 import { Card, CardContent } from '@/components/ui/card';
-import { Calendar, MapPin, Users, ChevronRight } from 'lucide-react';
+import { Calendar, MapPin, Users, ChevronRight, Eye } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Tournaments = () => {
@@ -29,6 +29,12 @@ const Tournaments = () => {
       image: "https://images.unsplash.com/photo-1529699211952-734e80c4d42b",
     },
   ];
+  
+  const handleViewTournament = (tournamentTitle: string) => {
+    console.log(`Viewing tournament: ${tournamentTitle}`);
+    // In a real app, this would navigate to a tournament details page
+    alert(`Tournament details for: ${tournamentTitle}`);
+  };
   
   return (
     <section id="tournaments" className="py-20 bg-chess-light">
@@ -65,13 +71,24 @@ const Tournaments = () => {
                   </div>
                 </div>
                 
-                <Button 
-                  variant="ghost" 
-                  className="w-full mt-4 flex items-center justify-between text-chess-knight-red hover:text-chess-knight-red/80 hover:bg-chess-knight-red/5"
-                >
-                  <span>Tournament Details</span>
-                  <ChevronRight className="h-4 w-4" />
-                </Button>
+                <div className="mt-4 flex gap-2">
+                  <Button 
+                    variant="ghost" 
+                    className="flex-1 text-chess-knight-red hover:text-chess-knight-red/80 hover:bg-chess-knight-red/5"
+                    onClick={() => handleViewTournament(tournament.title)}
+                  >
+                    <span>Tournament Details</span>
+                    <ChevronRight className="h-4 w-4 ml-1" />
+                  </Button>
+                  
+                  <Button 
+                    className="bg-chess-knight-red hover:bg-chess-knight-red/90 text-white"
+                    onClick={() => handleViewTournament(tournament.title)}
+                  >
+                    <Eye className="mr-1" />
+                    View
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           ))}
