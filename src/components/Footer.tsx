@@ -9,10 +9,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between gap-8 pb-8 border-b border-gray-800">
           <div className="md:w-1/3">
             <div className="flex items-center gap-2 mb-4">
-              <div className="flex items-center">
-                <KnightLogo className="fill-white" />
-                <KnightLogo className="fill-white ml-2" size={30} />
-              </div>
+              <KnightLogo className="fill-white" />
               <span className="font-bold text-xl tracking-tight">
                 Samion Magnus
               </span>
