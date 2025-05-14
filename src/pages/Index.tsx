@@ -5,7 +5,6 @@ import About from '@/components/About';
 import Achievements from '@/components/Achievements';
 import Training from '@/components/Training';
 import Tournaments from '@/components/Tournaments';
-import Gallery from '@/components/Gallery';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
@@ -19,7 +18,6 @@ const Index = () => {
         <Achievements />
         <Training />
         <Tournaments />
-        <Gallery />
         <Contact />
       </main>
       <Footer />

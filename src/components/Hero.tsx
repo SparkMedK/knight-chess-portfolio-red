@@ -54,7 +54,7 @@ const Hero = () => {
         <div className="w-full md:w-1/3 relative">
           <div className="aspect-square bg-chess-knight-red/20 rounded-full backdrop-blur-sm p-4">
             <img
-              src="public/lovable-uploads/7f41f1b4-7696-42eb-a509-c470c80a7e3b.png"
+              src="/lovable-uploads/64c78768-1c03-45c2-a737-fd24bc02dcec.png"
               alt="Chess Grandmaster"
               className="w-full h-full object-cover rounded-full"
             />

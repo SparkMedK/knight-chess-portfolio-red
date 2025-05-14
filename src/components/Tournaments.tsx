@@ -12,7 +12,7 @@ const Tournaments = () => {
       date: "June 10-15, 2025",
       location: "Stockholm, Sweden",
       participants: "120+ players",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+      image: "/lovable-uploads/64c78768-1c03-45c2-a737-fd24bc02dcec.png",
     },
     {
       title: "International Masters Challenge",

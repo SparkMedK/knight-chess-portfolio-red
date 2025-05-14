@@ -23,7 +23,6 @@ const Navigation = () => {
           <a href="#achievements" className="text-sm font-medium hover:text-chess-knight-red transition-colors">Achievements</a>
           <a href="#training" className="text-sm font-medium hover:text-chess-knight-red transition-colors">Training</a>
           <a href="#tournaments" className="text-sm font-medium hover:text-chess-knight-red transition-colors">Tournaments</a>
-          <a href="#gallery" className="text-sm font-medium hover:text-chess-knight-red transition-colors">Gallery</a>
           <Button className="bg-chess-knight-red hover:bg-chess-knight-red/90">Contact</Button>
         </nav>
 
@@ -68,13 +67,6 @@ const Navigation = () => {
             onClick={() => setIsMenuOpen(false)}
           >
             Tournaments
-          </a>
-          <a 
-            href="#gallery" 
-            className="text-sm font-medium hover:text-chess-knight-red transition-colors p-2"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Gallery
           </a>
           <Button 
             className="bg-chess-knight-red hover:bg-chess-knight-red/90 w-full"
