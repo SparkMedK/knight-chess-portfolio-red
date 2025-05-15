@@ -15,7 +15,6 @@ const About = () => {
     <section id="about" className="py-20 bg-chess-light">
       <div className="container">
         <div className="flex items-center gap-4 mb-12">
-          <KnightLogo size={32} />
           <h2 className="text-3xl font-bold">About The Grand Master</h2>
         </div>
         
@@ -53,7 +52,6 @@ const About = () => {
             
             <div className="mt-8 p-6 bg-white rounded-lg shadow-md border border-gray-100">
               <h3 className="text-xl font-semibold mb-4 flex items-center">
-                <KnightLogo size={24} className="mr-2" />
                 Philosophy
               </h3>
               <p className="italic text-gray-700">

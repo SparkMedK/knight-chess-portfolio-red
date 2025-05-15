@@ -55,7 +55,7 @@ const Footer = () => {
         
         <div className="pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-gray-500">
-            &copy; {new Date().getFullYear()} Sportifio product. All rights reserved. Grandmaster Samion Magnus.
+            &copy; {new Date().getFullYear()} Sportifio product. All rights reserved.
           </p>
           
           <div className="flex gap-4">

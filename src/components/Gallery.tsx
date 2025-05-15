@@ -36,7 +36,6 @@ const Gallery = () => {
     <section id="gallery" className="py-20 bg-white">
       <div className="container">
         <div className="flex items-center gap-4 mb-12">
-          <KnightLogo size={32} />
           <h2 className="text-3xl font-bold">Gallery</h2>
         </div>
         

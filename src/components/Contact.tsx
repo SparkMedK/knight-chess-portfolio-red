@@ -11,7 +11,6 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-chess-dark text-white">
       <div className="container">
         <div className="flex items-center gap-4 mb-12">
-          <KnightLogo size={32} className="fill-white" />
           <h2 className="text-3xl font-bold">Contact</h2>
         </div>
         
