@@ -26,7 +26,7 @@ const Tournaments = () => {
       date: "August 15-22, 2025",
       location: "Prague, Czech Republic",
       participants: "32 national teams",
-      image: "https://images.unsplash.com/photo-1529699211952-734e80c4d42b",
+      image: "https://shorturl.at/ATrJe",
     },
   ];
   
