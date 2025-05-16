@@ -1,10 +1,15 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import KnightLogo from './KnightLogo';
 import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
+    const handleScroll = () => {
+      const tournamentsSection = document.getElementById('tournaments');
+      if (tournamentsSection instanceof HTMLElement) {
+        tournamentsSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
   return (
     <div className="relative overflow-hidden bg-chess-dark text-white">
       {/* Background pattern */}
@@ -44,7 +49,11 @@ const Hero = () => {
               Book a Training
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-            <Button variant="outline" className="border-white text-black hover:bg-white/10">
+            <Button
+              variant="outline"
+              className="border-white text-black hover:bg-white/10"
+              onClick={handleScroll}
+            >
               View Tournaments
             </Button>
           </div>
