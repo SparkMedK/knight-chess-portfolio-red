@@ -11,7 +11,6 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-chess-dark text-white">
       <div className="container">
         <div className="flex items-center gap-4 mb-12">
-          <KnightLogo size={32} className="fill-white" />
           <h2 className="text-3xl font-bold">Contact</h2>
         </div>
         
@@ -30,7 +29,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm text-gray-400">Email</p>
-                  <p className="text-lg">contact@samionmagnus.com</p>
+                  <p className="text-lg">sportifio.team@gmail.com</p>
                 </div>
               </div>
               
@@ -40,7 +39,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm text-gray-400">Phone</p>
-                  <p className="text-lg">+46 70 123 4567</p>
+                  <p className="text-lg">+00 00 00 0000</p>
                 </div>
               </div>
               

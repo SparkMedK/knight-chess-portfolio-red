@@ -26,7 +26,6 @@ const Hero = () => {
       <div className="container relative z-10 flex flex-col md:flex-row items-center justify-between py-20 md:py-32">
         <div className="w-full md:w-1/2 mb-10 md:mb-0">
           <div className="mb-6 flex items-center">
-            <KnightLogo size={60} />
             <div className="h-1 flex-grow ml-4 bg-chess-knight-red"></div>
           </div>
           
@@ -45,22 +44,19 @@ const Hero = () => {
               Book a Training
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white/10">
+            <Button variant="outline" className="border-white text-black hover:bg-white/10">
               View Tournaments
             </Button>
           </div>
         </div>
         
         <div className="w-full md:w-1/3 relative">
-          <div className="aspect-square bg-chess-knight-red/20 rounded-full backdrop-blur-sm p-4">
+          <div className="aspect-square bg-chess-knight-red/10 rounded-full backdrop-blur-md p-4 transition-transform hover:scale-105 duration-300 shadow-[0_0_30px_rgba(239,68,68,0.2)] hover:shadow-[0_0_40px_rgba(239,68,68,0.3)]">
             <img
               src="/lovable-uploads/64c78768-1c03-45c2-a737-fd24bc02dcec.png"
               alt="Chess Grandmaster"
-              className="w-full h-full object-cover rounded-full"
+              className="w-full h-full  rounded-full ring-4 ring-chess-knight-red/30"
             />
-          </div>
-          <div className="absolute -bottom-4 -right-4 bg-chess-knight-red rounded-full p-3">
-            <KnightLogo size={40} className="fill-white" />
           </div>
         </div>
       </div>

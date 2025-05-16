@@ -26,7 +26,7 @@ const Tournaments = () => {
       date: "August 15-22, 2025",
       location: "Prague, Czech Republic",
       participants: "32 national teams",
-      image: "https://images.unsplash.com/photo-1529699211952-734e80c4d42b",
+      image: "https://shorturl.at/ATrJe",
     },
   ];
   
@@ -40,7 +40,6 @@ const Tournaments = () => {
     <section id="tournaments" className="py-20 bg-chess-light">
       <div className="container">
         <div className="flex items-center gap-4 mb-12">
-          <KnightLogo size={32} />
           <h2 className="text-3xl font-bold">Upcoming Tournaments</h2>
         </div>
         

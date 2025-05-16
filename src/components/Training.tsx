@@ -18,7 +18,7 @@ const Training = () => {
     {
       title: "Group Masterclasses",
       description: "Small group sessions focused on specific aspects of chess. Learn alongside peers and benefit from collaborative problem-solving.",
-      price: "$80",
+      price: "$90",
       duration: "Per session",
       icon: <Users className="h-6 w-6" />,
       popular: false,
@@ -26,7 +26,7 @@ const Training = () => {
     {
       title: "Online Training",
       description: "Remote coaching through video conferencing with shared digital board. Flexible scheduling for students worldwide.",
-      price: "$90",
+      price: "$80",
       duration: "Per hour",
       icon: <Monitor className="h-6 w-6" />,
       popular: false,
@@ -37,7 +37,6 @@ const Training = () => {
     <section id="training" className="py-20 bg-chess-dark text-white">
       <div className="container">
         <div className="flex items-center gap-4 mb-12">
-          <KnightLogo size={32} className="fill-white" />
           <h2 className="text-3xl font-bold">Training Services</h2>
         </div>
         
@@ -70,7 +69,7 @@ const Training = () => {
               </CardContent>
               <CardFooter className="pt-0 pb-6">
                 <Button 
-                  className={`w-full ${program.popular ? 'bg-chess-knight-red hover:bg-chess-knight-red/90' : 'bg-gray-700 hover:bg-gray-600'}`}
+                  className="bg-chess-knight-red hover:bg-chess-knight-red/90"
                 >
                   Book Now
                 </Button>
