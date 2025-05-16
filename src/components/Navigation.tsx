@@ -3,9 +3,11 @@ import React, { useState } from 'react';
 import KnightLogo from './KnightLogo';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+import { useHandleScroll } from '@/hooks/useHandleScroll';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const handleScroll = useHandleScroll();
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b">
@@ -23,7 +25,7 @@ const Navigation = () => {
           <a href="#achievements" className="text-sm font-medium hover:text-chess-knight-red transition-colors">Achievements</a>
           <a href="#training" className="text-sm font-medium hover:text-chess-knight-red transition-colors">Training</a>
           <a href="#tournaments" className="text-sm font-medium hover:text-chess-knight-red transition-colors">Tournaments</a>
-          <Button className="bg-chess-knight-red hover:bg-chess-knight-red/90">Contact</Button>
+          <Button className="bg-chess-knight-red hover:bg-chess-knight-red/90" onClick={() => handleScroll('contact')}>Contact</Button>
         </nav>
 
         {/* Mobile menu button */}

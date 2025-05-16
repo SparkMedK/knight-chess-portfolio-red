@@ -75,21 +75,6 @@ const Tournaments = () => {
             </Card>
           ))}
         </div>
-        
-        <div className="bg-white p-8 rounded-lg shadow-md">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-            <div>
-              <h3 className="text-2xl font-semibold mb-2">Tournament Preparation Services</h3>
-              <p className="text-gray-600">
-                Gain a competitive edge with specialized training sessions designed to prepare you for upcoming tournaments.
-                Analysis of potential opponents, opening preparation, and mental conditioning.
-              </p>
-            </div>
-            <Button className="bg-chess-knight-red hover:bg-chess-knight-red/90 text-white whitespace-nowrap">
-              Learn More
-            </Button>
-          </div>
-        </div>
       </div>
     </section>
   );

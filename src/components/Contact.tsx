@@ -83,7 +83,7 @@ const Contact = () => {
           
           <div className="bg-white/5 p-8 rounded-lg">
             <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
-            <form className="space-y-6">
+            <form className="space-y-6"   action="https://formspree.io/f/xyzwojpr" method="POST" >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm">Your Name</label>

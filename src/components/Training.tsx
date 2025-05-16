@@ -68,11 +68,11 @@ const Training = () => {
                 </div>
               </CardContent>
               <CardFooter className="pt-0 pb-6">
-                <Button 
-                  className="bg-chess-knight-red hover:bg-chess-knight-red/90"
-                >
+              <Button className="bg-chess-knight-red hover:bg-chess-knight-red/90" asChild>
+                <a href="mailto:sportifio.team@gmail.com" target="_blank" rel="noopener noreferrer">
                   Book Now
-                </Button>
+                </a>
+              </Button>
               </CardFooter>
             </Card>
           ))}
