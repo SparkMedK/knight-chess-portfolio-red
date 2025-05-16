@@ -19,38 +19,6 @@ const Footer = () => {
               tournament preparation, and coaching services for players of all levels.
             </p>
           </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
-            <div>
-              <h4 className="font-semibold text-lg mb-4">Quick Links</h4>
-              <ul className="space-y-2">
-                <li><a href="#about" className="text-gray-400 hover:text-chess-knight-red transition-colors">About</a></li>
-                <li><a href="#achievements" className="text-gray-400 hover:text-chess-knight-red transition-colors">Achievements</a></li>
-                <li><a href="#training" className="text-gray-400 hover:text-chess-knight-red transition-colors">Training</a></li>
-                <li><a href="#tournaments" className="text-gray-400 hover:text-chess-knight-red transition-colors">Tournaments</a></li>
-                <li><a href="#contact" className="text-gray-400 hover:text-chess-knight-red transition-colors">Contact</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold text-lg mb-4">Resources</h4>
-              <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-chess-knight-red transition-colors">Chess Blog</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-chess-knight-red transition-colors">Training Materials</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-chess-knight-red transition-colors">Game Analysis</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-chess-knight-red transition-colors">Video Library</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold text-lg mb-4">Legal</h4>
-              <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-chess-knight-red transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-chess-knight-red transition-colors">Terms of Service</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-chess-knight-red transition-colors">Cookie Policy</a></li>
-              </ul>
-            </div>
-          </div>
         </div>
         
         <div className="pt-6 flex flex-col md:flex-row justify-between items-center gap-4">

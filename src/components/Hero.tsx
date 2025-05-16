@@ -1,10 +1,11 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import KnightLogo from './KnightLogo';
 import { ArrowRight } from 'lucide-react';
+import { useHandleScroll } from '@/hooks/useHandleScroll';
 
 const Hero = () => {
+    const handleScroll = useHandleScroll();
+
   return (
     <div className="relative overflow-hidden bg-chess-dark text-white">
       {/* Background pattern */}
@@ -40,11 +41,18 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button className="bg-chess-knight-red hover:bg-chess-knight-red/90 text-white">
+            <Button 
+              className="bg-chess-knight-red hover:bg-chess-knight-red/90 text-white"
+              onClick={() => handleScroll('training')}
+            >
               Book a Training
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-            <Button variant="outline" className="border-white text-black hover:bg-white/10">
+            <Button
+              variant="outline"
+              className="border-white text-black hover:bg-white/10"
+              onClick={() => handleScroll('tournaments')}
+            >
               View Tournaments
             </Button>
           </div>
