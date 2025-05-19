@@ -1,4 +1,3 @@
-
 import React from 'react';
 import KnightLogo from './KnightLogo';
 import { Button } from '@/components/ui/button';
@@ -32,6 +31,11 @@ const Training = () => {
       popular: false,
     },
   ];
+
+  const handleBookNow = () => {
+    const mailtoLink = `mailto:sportifio.team@gmail.com?subject=${encodeURIComponent("Training Program Inquiry")}&body=${encodeURIComponent("I'm interested in booking a training session.")}`;
+    window.open(mailtoLink, '_blank');
+  };
   
   return (
     <section id="training" className="py-20 bg-chess-dark text-white">
@@ -68,11 +72,12 @@ const Training = () => {
                 </div>
               </CardContent>
               <CardFooter className="pt-0 pb-6">
-              <Button className="bg-chess-knight-red hover:bg-chess-knight-red/90" asChild>
-                <a href="mailto:sportifio.team@gmail.com" target="_blank" rel="noopener noreferrer">
+                <Button 
+                  className="bg-chess-knight-red hover:bg-chess-knight-red/90"
+                  onClick={handleBookNow}
+                >
                   Book Now
-                </a>
-              </Button>
+                </Button>
               </CardFooter>
             </Card>
           ))}

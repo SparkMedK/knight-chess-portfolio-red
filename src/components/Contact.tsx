@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -7,6 +6,28 @@ import KnightLogo from './KnightLogo';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 const Contact = () => {
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const mailtoLink = `mailto:sportifio.team@gmail.com?subject=${encodeURIComponent(form.subject)}&body=${encodeURIComponent(
+      `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
+    )}`;
+    window.open(mailtoLink, '_blank');
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm({
+      ...form,
+      [e.target.id]: e.target.value
+    });
+  };
+
   return (
     <section id="contact" className="py-20 bg-chess-dark text-white">
       <div className="container">
@@ -83,29 +104,54 @@ const Contact = () => {
           
           <div className="bg-white/5 p-8 rounded-lg">
             <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
-            <form className="space-y-6"   action="https://formspree.io/f/xyzwojpr" method="POST" >
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm">Your Name</label>
-                  <Input id="name" placeholder="John Doe" className="bg-white/10 border-white/20 text-white placeholder:text-gray-400" />
+                  <Input 
+                    id="name" 
+                    placeholder="John Doe" 
+                    className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
+                    value={form.name}
+                    onChange={handleChange}
+                  />
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="email" className="text-sm">Email Address</label>
-                  <Input id="email" type="email" placeholder="john@example.com" className="bg-white/10 border-white/20 text-white placeholder:text-gray-400" />
+                  <Input 
+                    id="email" 
+                    type="email" 
+                    placeholder="john@example.com" 
+                    className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
+                    value={form.email}
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
               
               <div className="space-y-2">
                 <label htmlFor="subject" className="text-sm">Subject</label>
-                <Input id="subject" placeholder="How can I help you?" className="bg-white/10 border-white/20 text-white placeholder:text-gray-400" />
+                <Input 
+                  id="subject" 
+                  placeholder="How can I help you?" 
+                  className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
+                  value={form.subject}
+                  onChange={handleChange}
+                />
               </div>
               
               <div className="space-y-2">
                 <label htmlFor="message" className="text-sm">Message</label>
-                <Textarea id="message" placeholder="Tell me more about your request..." className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 min-h-[120px]" />
+                <Textarea 
+                  id="message" 
+                  placeholder="Tell me more about your request..." 
+                  className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 min-h-[120px]"
+                  value={form.message}
+                  onChange={handleChange}
+                />
               </div>
               
-              <Button className="w-full bg-chess-knight-red hover:bg-chess-knight-red/90 text-white">
+              <Button type="submit" className="w-full bg-chess-knight-red hover:bg-chess-knight-red/90 text-white">
                 Send Message
                 <Send className="ml-2 h-4 w-4" />
               </Button>
