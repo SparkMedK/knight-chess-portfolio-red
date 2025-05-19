@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -82,29 +83,29 @@ const Contact = () => {
           
           <div className="bg-white/5 p-8 rounded-lg">
             <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
-            <form className="space-y-6" action="mailto:sportifio.team@gmail.com" method="post" encType="text/plain">
+            <form className="space-y-6"   action="https://formspree.io/f/xyzwojpr" method="POST" >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm">Your Name</label>
-                  <Input id="name" name="name" placeholder="John Doe" className="bg-white/10 border-white/20 text-white placeholder:text-gray-400" />
+                  <Input id="name" placeholder="John Doe" className="bg-white/10 border-white/20 text-white placeholder:text-gray-400" />
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="email" className="text-sm">Email Address</label>
-                  <Input id="email" name="email" type="email" placeholder="john@example.com" className="bg-white/10 border-white/20 text-white placeholder:text-gray-400" />
+                  <Input id="email" type="email" placeholder="john@example.com" className="bg-white/10 border-white/20 text-white placeholder:text-gray-400" />
                 </div>
               </div>
               
               <div className="space-y-2">
                 <label htmlFor="subject" className="text-sm">Subject</label>
-                <Input id="subject" name="subject" placeholder="How can I help you?" className="bg-white/10 border-white/20 text-white placeholder:text-gray-400" />
+                <Input id="subject" placeholder="How can I help you?" className="bg-white/10 border-white/20 text-white placeholder:text-gray-400" />
               </div>
               
               <div className="space-y-2">
                 <label htmlFor="message" className="text-sm">Message</label>
-                <Textarea id="message" name="message" placeholder="Tell me more about your request..." className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 min-h-[120px]" />
+                <Textarea id="message" placeholder="Tell me more about your request..." className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 min-h-[120px]" />
               </div>
               
-              <Button type="submit" className="w-full bg-chess-knight-red hover:bg-chess-knight-red/90 text-white">
+              <Button className="w-full bg-chess-knight-red hover:bg-chess-knight-red/90 text-white">
                 Send Message
                 <Send className="ml-2 h-4 w-4" />
               </Button>
